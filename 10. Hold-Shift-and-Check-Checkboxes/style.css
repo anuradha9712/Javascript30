@@ -6,9 +6,10 @@ html {
 h1{
     max-width: 300px;
     margin: 50px auto;
-    color: white;
+    /* color: white; */
     text-align: center;
     line-height: 2.5rem;
+    font-family: 'helvetica neue';
 }
 
 .inbox {
