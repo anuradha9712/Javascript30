@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<style>
+    body{
+        background-color: black;
+        text-align: center;
+    }
+    h1{
+        color: #3b39db;
+    }
+    h2{
+        color: #2926cf
+    }
+</style>
+
+<body>
+    <h1>KONAMI CODE</h1>
+    <h2>Type "html" and see the magic!!</h2>
+    <script>
+        const pressed = [];
+        const secretCode = 'html';
+
+        window.addEventListener('keyup', (e) => {
+            console.log(e.key);
+            pressed.push(e.key);
+            pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+            if (pressed.join('').includes(secretCode)) {
+                console.log('DING DING!');
+                cornify_add();
+            }
+            console.log(pressed);
+        });
+    </script>
+</body>
+
+</html>
